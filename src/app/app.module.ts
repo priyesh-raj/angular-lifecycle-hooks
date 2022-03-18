@@ -1,15 +1,14 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { LifecycleHookDoCheckComponent } from './lifecycle-hook-do-check/lifecycle-hook-do-check.component';
+import { DoCheckComponent } from './do-check/do-check.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, LifecycleHookDoCheckComponent],
+  declarations: [AppComponent, HelloComponent, DoCheckComponent],
   bootstrap: [AppComponent],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
