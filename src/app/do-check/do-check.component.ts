@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./do-check.component.css'],
 })
 export class DoCheckComponent implements OnInit {
-  pottery = {
+  public pottery = {
     requiredTools: ['Needles', 'Scrappers', 'Calipers', 'Sponges', 'Brushes'],
     types: ['Earthenware', 'Stoneware', 'Porcelain'],
   };

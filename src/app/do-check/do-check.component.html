@@ -1,7 +1,9 @@
 <section>
   <ul>
     Pottery Types:
-    <li *ngFor="let tool of pottery.requiredTools">{{ tool | lowercase }}</li>
+    <span>
+      <li *ngFor="let tool of pottery.requiredTools">{{ tool | lowercase }}</li>
+    </span>
   </ul>
 
   <button (click)="addPotteryTool('Cut off wires')">Add Tool</button>
