@@ -1,8 +1,27 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello>
 <p>Start editing to see some magic happen :)</p>
 
 <section>
   <app-do-check></app-do-check>
-</section>
+</section> -->
 
-<button (click)="addPotteryTool('tweezers')">Add Pottery Tool</button>
+<section>
+  <mat-tab-group>
+    <mat-tab label="ngOnChanges"> TO DO </mat-tab>
+    <mat-tab label="ngOnInit"> TO DO </mat-tab>
+    <mat-tab label="ngDoCheck">
+      <ng-template matTabContent>
+        <app-do-check></app-do-check>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="ngAfterContentInit">
+      <ng-template matTabContent>
+        <app-after-content-init></app-after-content-init>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="ngAfterContentChecked"> TO DO </mat-tab>
+    <mat-tab label="ngAfterViewInit"> TO DO </mat-tab>
+    <mat-tab label="ngAfterViewInit"> TO DO </mat-tab>
+    <mat-tab label="ngOnDestroy"> TO DO </mat-tab>
+  </mat-tab-group>
+</section>

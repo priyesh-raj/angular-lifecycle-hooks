@@ -13,8 +13,8 @@ import { DoCheckComponent } from './do-check/do-check.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @ViewChild('DoCheckComponent', { static: true })
-  doCheckComponent;
+  @ViewChild(DoCheckComponent, { static: true })
+  doCheckComponent: DoCheckComponent;
   name = 'Angular ' + VERSION.major;
 
   addPotteryTool(eve: string) {

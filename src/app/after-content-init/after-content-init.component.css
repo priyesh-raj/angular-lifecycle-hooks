@@ -1,0 +1,9 @@
+div[id='pottery-types'] {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-block-end: 10px;
+}
+
+span[id='tool'] {
+  margin: 2px 0;
+}
