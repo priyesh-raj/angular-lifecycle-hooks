@@ -10,15 +10,18 @@ export class DoCheckComponent implements OnInit {
     requiredTools: ['Needles', 'Scrappers', 'Calipers', 'Sponges', 'Brushes'],
     types: ['Earthenware', 'Stoneware', 'Porcelain'],
   };
+
+  employee = {
+    name: 'xyz',
+    age: '32',
+    experience: '36 months',
+  };
+
   constructor() {}
 
   ngOnInit() {}
 
-  addPotteryTool(eveData: string): void {
-    this.pottery.requiredTools.push(eveData);
-  }
-
-  replaceNthPotteryTool(tool: string, index: number): void {
-    this.pottery.requiredTools[index] = tool;
+  updateEmp() {
+    this.employee.name = 'abc';
   }
 }

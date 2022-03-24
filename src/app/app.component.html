@@ -1,13 +1,10 @@
-<!-- <hello name="{{ name }}"></hello>
-<p>Start editing to see some magic happen :)</p>
-
-<section>
-  <app-do-check></app-do-check>
-</section> -->
-
 <section>
   <mat-tab-group>
-    <mat-tab label="ngOnChanges"> TO DO </mat-tab>
+    <mat-tab label="ngOnChanges">
+      <ng-template matTabContent>
+        <app-on-change></app-on-change>
+      </ng-template>
+    </mat-tab>
     <mat-tab label="ngOnInit"> TO DO </mat-tab>
     <mat-tab label="ngDoCheck">
       <ng-template matTabContent>
@@ -16,12 +13,36 @@
     </mat-tab>
     <mat-tab label="ngAfterContentInit">
       <ng-template matTabContent>
-        <app-after-content-init></app-after-content-init>
+        <app-after-content-init>
+          <app-content-projection-child></app-content-projection-child>
+        </app-after-content-init>
       </ng-template>
     </mat-tab>
-    <mat-tab label="ngAfterContentChecked"> TO DO </mat-tab>
-    <mat-tab label="ngAfterViewInit"> TO DO </mat-tab>
-    <mat-tab label="ngAfterViewInit"> TO DO </mat-tab>
-    <mat-tab label="ngOnDestroy"> TO DO </mat-tab>
+    <mat-tab label="ngAfterContentChecked">
+      <ng-template matTabContent>
+        <app-after-content-checked>
+          <app-content-projection-child></app-content-projection-child>
+        </app-after-content-checked>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="ngAfterViewInit">
+      <ng-template matTabContent>
+        <app-after-view-init>
+          <app-content-projection-child></app-content-projection-child>
+        </app-after-view-init>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="ngAfterViewChecked">
+      <ng-template matTabContent>
+        <app-after-view-checked>
+          <app-content-projection-child></app-content-projection-child>
+        </app-after-view-checked>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="ngOnDestroy">
+      <ng-template matTabContent>
+        <app-on-destroy></app-on-destroy>
+      </ng-template>
+    </mat-tab>
   </mat-tab-group>
 </section>

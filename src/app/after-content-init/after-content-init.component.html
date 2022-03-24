@@ -1,19 +1,13 @@
-<section *ngIf="pottery">
+<section>
   <header>
     <h3>ngAfterContentInit hook</h3>
     <p>Frequency - Called once after 1st ngDoCheck()</p>
   </header>
   <hr />
   <main>
-    <div id="pottery-types">
-      Pottery Types:
-      <span id="tool" *ngFor="let tool of pottery.requiredTools">
-        <input [value]="tool | lowercase" />
-      </span>
-    </div>
-    <button (click)="replace2ndTool()">Replace 2nd Item</button>
+    <ng-content></ng-content>
   </main>
   <footer>
-    <p *ngIf="count">AfterContentInit called {{ count }} times</p>
+    <p>AfterContentInit called {{ afterContentInitCount }} times</p>
   </footer>
 </section>

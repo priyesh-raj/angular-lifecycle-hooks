@@ -1,5 +1,11 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChild,
+  OnInit,
+} from '@angular/core';
 import { AppService } from '../app-service.service';
+import { ContentProjectionChildComponent } from '../shared/content-projection-child/content-projection-child.component';
 
 @Component({
   selector: 'app-after-content-init',
@@ -7,22 +13,21 @@ import { AppService } from '../app-service.service';
   styleUrls: ['./after-content-init.component.css'],
 })
 export class AfterContentInitComponent implements OnInit, AfterContentInit {
-  count = 0;
-  pottery;
-  constructor(private appService: AppService) {
-    this.pottery = this.appService.pottery;
-  }
+  constructor() {}
+  afterContentInitCount = 0;
+  @ContentChild(ContentProjectionChildComponent)
+  contentProjectionChildComponent: ContentProjectionChildComponent;
 
   ngOnInit() {
     console.log('OnInit Called !!');
   }
 
-  ngAfterContentInit() {
-    console.log('AfterContentInit called !!');
-    this.count++;
+  ngDoCheck() {
+    console.log('DoCheck called');
   }
 
-  replace2ndTool() {
-    this.appService.pottery.requiredTools[2] = 'wipe cloth';
+  ngAfterContentInit() {
+    console.log('AfterContentInit called !!');
+    this.afterContentInitCount++;
   }
 }

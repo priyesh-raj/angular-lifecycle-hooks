@@ -1,0 +1,21 @@
+<section>
+  <header>
+    <h3>ngAfterViewInit hook</h3>
+    <p>
+      Frequency - Called after the ngAfterViewInit() and every subsequent
+      ngAfterContentChecked()
+    </p>
+  </header>
+  <hr />
+  <main>
+    <ng-content *ngIf="render"></ng-content>
+  </main>
+  <hr />
+  <footer>
+    <p>DoCheck called {{ doCheckCount }} times</p>
+    <p>AfterContentInit called {{ afterContentInitCount }} times</p>
+    <p>AfterContentChecked called {{ afterContentCheckedCount }} times</p>
+    <p>AfterViewInit called {{ afterViewInitCount }} times</p>
+    <p>AfterViewChecked called {{ afterViewCheckedCount }} times</p>
+  </footer>
+</section>

@@ -16,10 +16,4 @@ export class AppComponent {
   @ViewChild(DoCheckComponent, { static: true })
   doCheckComponent: DoCheckComponent;
   name = 'Angular ' + VERSION.major;
-
-  addPotteryTool(eve: string) {
-    // this.doCheckComponent.pottery.requiredTools.push(eve);
-    console.log(this.doCheckComponent);
-    // this.doCheckComponent.pottery
-  }
 }
